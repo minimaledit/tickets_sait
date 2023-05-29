@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Билеты на общественный транспорт</title>
+</head>
+
+<body>
+  <header>
+    <!-- Заголовок сайта -->
+    <h1>Билеты на общественный транспорт</h1>
+    <!-- Навигационное меню (если необходимо) -->
+    <nav>
+      <ul>
+        <li><a class='nav-item' href="index.html">Главная</a></li>
+        <li><a class='nav-item' href="purchase.html">Покупка билетов</a></li>
+        <li><a class='nav-item' href="admin.html">Администратор</a></li>
+        <li><a class='nav-item' href="transactions.html">Отслеживание транзакций</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Добро пожаловать!</h2>
+    <p>На нашем сайте вы можете узнать актуальную стоимость проездных билетов, а так же приобрести их.</p>
+
+    <div id="ticket-prices">
+      <h3>Стоимость билетов</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Вид транспорта</th>
+            <th>Тип билета</th>
+            <th>Стоимость</th>
+          </tr>
+        </thead>
+        <tbody id="ticket-prices-body">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Билеты на общественный транспорт. Все права защищены.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

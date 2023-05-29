@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Администратор</title>
+</head>
+
+<body>
+  <header>
+    <!-- Заголовок сайта -->
+    <h1>Администратор</h1>
+    <!-- Навигационное меню (если необходимо) -->
+    <nav>
+      <ul>
+        <li><a class='nav-item' href="index.html">Главная</a></li>
+        <li><a class='nav-item' href="purchase.html">Покупка билетов</a></li>
+        <li><a class='nav-item' href="admin.html">Администратор</a></li>
+        <li><a class='nav-item' href="transactions.html">Отслеживание транзакций</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Список информации</h2>
+
+    <div id="admin-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Вид транспорта</th>
+            <th>Тип билетов</th>
+            <th>Стоимость</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Здесь будут отображаться строки с информацией -->
+        </tbody>
+      </table>
+    </div>
+
+    <form id="add-info-form">
+      <h3>Добавить информацию</h3>
+      <label for="transport-type">Вид транспорта:</label>
+      <select id="transport-type-select" required>
+        <option value="Автобус">Автобус</option>
+        <option value="Трамвай">Трамвай</option>
+        <option value="Троллейбус">Троллейбус</option>
+        <option value="Метро">Метро</option>
+      </select>
+
+      <label for="ticket-type">Тип билета:</label>
+      <select id="ticket-type-select" required>
+        <option value="1 день">1 день</option>
+        <option value="5 дней">5 дней</option>
+        <option value="10 дней">10 дней</option>
+        <option value="30 дней">30 дней</option>
+        <option value="90 дней">90 дней</option>
+        <option value="365 дней">365 дней</option>
+        <option value="1 поездка">1 поездка</option>
+        <option value="2 поездки">2 поездки</option>
+        <option value="5 поездок">5 поездок</option>
+        <option value="10 поездок">10 поездок</option>
+        <option value="20 поездок">20 поездок</option>
+        <option value="60 поездок">60 поездок</option>
+      </select>
+
+      <label for="price">Стоимость:</label>
+      <input type="number" id="price-input" required>
+
+      <button type="submit">Добавить</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Билеты на общественный транспорт. Все права защищены.</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Отслеживание транзакций</title>
+</head>
+
+<body>
+  <header>
+    <!-- Заголовок сайта -->
+    <h1>Отслеживание транзакций</h1>
+    <!-- Навигационное меню (если необходимо) -->
+    <nav>
+      <ul>
+        <li><a class='nav-item' href="index.html">Главная</a></li>
+        <li><a class='nav-item' href="purchase.html">Покупка билетов</a></li>
+        <li><a class='nav-item' href="admin.html">Администратор</a></li>
+        <li><a class='nav-item' href="transactions.html">Отслеживание транзакций</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Список транзакций</h2>
+
+    <table id="transactions-table">
+      <thead>
+        <tr>
+          <th class='tranz-item'>Почта</th>
+          <th class='tranz-item'>Вид транспорта</th>
+          <th class='tranz-item'>Тип билета</th>
+          <th class='tranz-item'>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Здесь будут отображаться строки с транзакциями -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Билеты на общественный транспорт. Все права защищены.</p>
+  </footer>
+
+  <script src="transactions.js"></script>
+</body>
+
+</html>

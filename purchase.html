@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Покупка билетов</title>
+</head>
+
+<body>
+  <header>
+    <!-- Заголовок сайта -->
+    <h1>Покупка билетов</h1>
+    <!-- Навигационное меню (если необходимо) -->
+    <nav>
+      <ul>
+        <li><a class='nav-item' href="index.html">Главная</a></li>
+        <li><a class='nav-item' href="purchase.html">Покупка билетов</a></li>
+        <li><a class='nav-item' href="admin.html">Администратор</a></li>
+        <li><a class='nav-item' href="transactions.html">Отслеживание транзакций</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Покупка билета</h2>
+
+    <form id="purchase-form">
+      <label for="transport-type">Вид транспорта:</label>
+      <select id="transport-type-select" required>
+        <option value="">Выберите вид транспорта</option>
+        <option value="Автобус">Автобус</option>
+        <option value="Трамвай">Трамвай</option>
+        <option value="Троллейбус">Троллейбус</option>
+        <option value="Метро">Метро</option>
+      </select>
+
+      <label for="ticket-type">Тип билета:</label>
+      <select id="ticket-type-select" required>
+        <option value="">Выберите тип билета</option>
+        <option value="1 день">1 день</option>
+        <option value="5 дней">5 дней</option>
+        <option value="10 дней">10 дней</option>
+        <option value="30 дней">30 дней</option>
+        <option value="90 дней">90 дней</option>
+        <option value="365 дней">365 дней</option>
+        <option value="1 поездка">1 поездка</option>
+        <option value="2 поездки">2 поездки</option>
+        <option value="5 поездок">5 поездок</option>
+        <option value="10 поездок">10 поездок</option>
+        <option value="20 поездок">20 поездок</option>
+        <option value="60 поездок">60 поездок</option>
+      </select>
+
+      <button type="button" id="calculate-btn">Узнать стоимость</button>
+
+      <div id="price-container" style="display: none;">
+        <p>Сумма к оплате: <span id="price">0</span> рублей</p>
+        <button type="button" id="continue-btn" style="display: none;">Продолжить</button>
+      </div>
+    </form>
+
+    <form id="payment-form" style="display: none;">
+      <label for="email">Введите вашу почту:</label>
+      <input type="email" id="email-input" required>
+
+      <button type="button" id="pay-btn">Оплатить</button>
+    </form>
+
+    <div id="confirmation-container" style="display: none;">
+      <p>На почту <span id="confirmation-email"></span> отправлено сообщение с инструкцией по оплате.</p>
+      <button type="button" id="cancel-btn">Я отказываюсь от покупки</button>
+      <button type="button" id="confirm-btn">Я оплатил</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Билеты на общественный транспорт. Все права защищены.</p>
+  </footer>
+
+  <script src="purchase.js"></script>
+</body>
+
+</html>
